@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>AS6 memory game</title>
+</head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+<div class="face">
+
+    <body>
+        <div id="startScreen">
+            <h3>
+                Memory Game
+            </h3>
+            <p class="start">
+
+                Press "ENTER" to initiate
+            </p>
+            <p id="amount-flip" class="start">
+                Cards turned: {{AmountFlip}}
+            </p>
+            <p id="player1" class="start">
+                Player 1 Score: {{count1}}
+            </p>
+            <p id="player2" class="start">
+                Player 2 Score: {{count2}}
+            </p>
+            <p class="elapsed-time-text">00:00</p>
+        <div class="buttons-container">
+        </div>
+        </div>
+        <script src="js/time-and-date-handling.js"></script>
+        <script src="js/stopwatch.js"></script>
+        <div id="cardboard">
+
+
+
+        </div>
+
+        <script>
+            var app = new Vue({
+                // select the element for this app
+                el: "#cardboard"
+            })
+        </script>
+
+        <script>
+            var player1 = new Vue({
+                el: "#player1",
+                data: {
+                    count1: 0,
+                    turn: true
+
+                }
+            });
+            var player2 = new Vue({
+                el: "#player2",
+                data: {
+                    count2: 0,
+                    turn: false
+
+                }
+            })
+        </script>
+        <!--
+    <button class="start-over" v-if="!playing" @click="playing = !playing">START NEW GAME</button>-->
+    </body>
+    
+
+
+</div>
+
+
+</html>

@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Stick', sans-serif;
+}
+
+.face {
+    background: url("https://images7.alphacoders.com/428/428991.jpg");
+    color: #eee;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective-origin: 50% 50%;
+    perspective: 1000px;
+    animation: animation 50s linear infinite;
+    
+}
+
+.start-over {
+    display:flexbox;
+    width: 100%;
+    padding: 1em;
+    background: tan;
+}
+
+#cardboard {
+    top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: auto;
+    width: 800px;
+    max-width: 1000px;
+    justify-content: center;
+}
+
+.cardboard {
+    margin: 1px;
+}
+
+.cardd {
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    border: 2px solid black;
+    backface-visibility: hidden;
+    margin: 5px;
+    transition: transform 0.5s;
+    margin: 1px;
+}
+
+.clearleft {
+    clear: left;
+}
+
+.audio {
+    float: right;
+    margin: 0;
+    visibility: hidden;
+}
+
+.card {
+    border: 2px solid black;
+    background-color: grey;
+    transition: transform 1s;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.outer {
+    position: relative;
+    float: left;
+    width: 100px;
+    height: 150px;
+}
+
+.card.back {
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.card.front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    width: 90%;
+}
+
+.title {
+    font-size: 5.6rem;
+    font-family: 'Lobster', cursive;
+}
+
+
+
+
+@keyframes animation {
+    100% {
+        background-position: 0px -3000px;
+    }
+}
+
+.start {
+    font-size: 30px;
+    margin-left: 200px;
+}
